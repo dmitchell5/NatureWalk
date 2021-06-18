@@ -1,0 +1,91 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+<div class="jumbotron mt-3">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Forest Highlight</th>
+        <th>Beach Highlight</th>
+        <th>River Highlight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="images\iguana.jpg" width="300" alt="A crab in someone's hands."></td>
+        <td><img src="images\crab.jpg" width="225" alt="A crab in someone's hands."></td>
+        <td><img src="images\swan.jpg" width="300" alt="A swan at a riverbank."></td>
+      </tr>
+      <tr>
+        <td>Tags: iguana, trees, vines</td>
+        <td>Tags: crab</td>
+        <td>Tags: swan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h1>Add a new walk</h1>
+</div>
+
+<form action="" method="post" id="entry">
+  <div class="row">
+    <div class= "col form-group mb-4">
+      <label for="date">When was your walk?</label>
+      <input type="date" name="date" id="date" required>
+    </div>
+
+
+    <div class= "col form-group mb-4">
+      <label for="photos">Upload a photo from your walk</label>
+      <input type="file" name="photos" accept="image/png, image/jpeg">
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class= "col form-group mb-4">
+      <label for="identifications">See any plants or animals you'd like to
+        document? Look it up on <a href="https://www.inaturalist.org/">iNaturalist</a>
+         and add them here! Or just use a general word like:</label>
+      <ul>
+        <li>Deer</li>
+        <li>Bird</li>
+        <li>Flowers</li>
+      </ul>
+      <textarea name="identifications" id="identifications" form="entry" rows="1"
+      cols="50"></textarea>
+    </div>
+
+    <div class= "col form-group mb-4">
+      <label for="location">Where did you walk?</label>
+      <select name="location" id="location-select">
+        <option value="beach">Beach</option>
+        <option value="forest">Forest</option>
+        <option value="mountains">Mountains</option>
+        <option value="plains">Plains</option>
+        <option value="lake">Lake</option>
+        <option value="ocean">River</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col form-group mb-4">
+      <label for="comments">Describe any features of the walk you'd like to
+        remember.</label>
+      <textarea name="comments" id="comments" form="entry" rows="5", cols="50">
+      </textarea>
+    </div>
+  </div>
+  
+  <button form="entry">Submit</button>
+</form>
+
+
+
+<%- include('bootfooter') -%>

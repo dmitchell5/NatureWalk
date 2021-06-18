@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #e6ffe6;
+}
+
+div a {
+  color: #006600;
+}
+
+a:hover {
+  color: #00b33c;
+}
+
+nav {
+  background-color: #2d862d;
+  font-family: "Georgia", Times, serif;
+}
+
+#login {
+  text-align: right;
+}
+
+#signout {
+  display: inline-block;
+}
+
+label {
+  display: block;
+}
+
+textarea {
+  display: block;
+}
+
+figure {
+  display: table;
+  margin: 0 auto;
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding-top: 3px;
+}
