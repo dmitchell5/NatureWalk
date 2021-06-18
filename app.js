@@ -56,26 +56,20 @@ app.get("/add-walk", (req, res) => {
   res.render("demo");
 });
 
+app.post("/new-walk", (req,res) => {
+  res.locals.date = req.body.date
+  res.locals.photo = req.body.photo
+  res.locals.identifications = req.body.identifications
+  res.locals.location = req.body.location
+  res.locals.comments = req.body.comments
+  res.render("new")
+});
+
 app.get("/about", (request, response) => {
   response.render("about");
 });
 
-app.get("/form", (request,response) => {
-  response.render("form")
-})
 
-app.get("/dataDemo", (request,response) => {
-  response.locals.name="Tim Hickey"
-  response.locals.vals =[1,2,3,4,5]
-  response.locals.people =[
-    {'name':'Tim','age':65},
-    {'name':'Yas','age':29}]
-  response.render("dataDemo")
-})
-
-app.post("/showformdata", (request,response) => {
-  response.json(request.body)
-})
 
 
 

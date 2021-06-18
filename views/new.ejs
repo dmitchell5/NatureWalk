@@ -1,0 +1,29 @@
+<%- include('bootheader') -%>
+
+<%- include('menubar') -%>
+
+<div class="row mt-5">
+  <div class="col">
+    <img src="<%= photo %>" width="80%">
+  </div>
+
+  <div class="col">
+    <h1>Your Latest Walk</h1>
+
+    <p>On <%= date %>, you took a walk in a <%= location %> area.</p>
+
+    <p>Here are some of the things you saw:</p>
+    <% split_ids = identifications.split(", ") %>
+
+    <ul>
+      <%  split_ids.map((id) => { %>
+        <li> <%= id %> </li>
+      <% }) %>
+    </ul>
+
+    <p>This is what you said about the walk:</p>
+    <p><%= comments %></p>
+  </div>
+</div>
+
+<%- include('bootfooter') -%>
