@@ -52,8 +52,9 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/demo",
-        function (req, res){res.render("demo");});
+app.get("/add-walk", (req, res) => {
+  res.render("demo");
+});
 
 app.get("/about", (request, response) => {
   response.render("about");
@@ -76,38 +77,7 @@ app.post("/showformdata", (request,response) => {
   response.json(request.body)
 })
 
-// Here is where we will explore using forms!
 
-
-
-// this example shows how to get the current US covid data
-// and send it back to the browser in raw JSON form, see
-// https://covidtracking.com/data/api
-// for all of the kinds of data you can get
-app.get("/c19",
-  async (req,res,next) => {
-    try {
-      const url = "https://covidtracking.com/api/v1/us/current.json"
-      const result = await axios.get(url)
-      res.json(result.data)
-    } catch(error){
-      next(error)
-    }
-})
-
-// this shows how to use an API to get recipes
-// http://www.recipepuppy.com/about/api/
-// the example here finds omelet recipes with onions and garlic
-app.get("/omelet",
-  async (req,res,next) => {
-    try {
-      const url = "http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3"
-      const result = await axios.get(url)
-      res.json(result.data)
-    } catch(error){
-      next(error)
-    }
-})
 
 // Don't change anything below here ...
 
