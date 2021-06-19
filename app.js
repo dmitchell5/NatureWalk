@@ -87,6 +87,17 @@ app.post("/song-results",
     }
 })
 
+app.get("/fav-walk", (request, response) => {
+  response.render("fav-walk");
+});
+
+app.post("/fav-result", (req,res) => {
+  res.locals.place = req.body.place
+  res.locals.animal = req.body.animal
+  res.locals.time = req.body.time
+  res.locals.season = req.body.season
+  res.render("fav-res")
+});
 
 
 // Don't change anything below here ...

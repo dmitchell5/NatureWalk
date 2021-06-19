@@ -1,0 +1,28 @@
+<%- include('bootheader') -%>
+
+<%- include('menubar') -%>
+
+<h1>Your Favorite Walk</h1>
+
+<p>It sounds like your favorite walk would be
+  <% if (place.localeCompare("beach") == 0) { %>
+    on the <%= place %>
+  <% } else if (place.localeCompare("river") == 0) { %>
+    by the <%= place %>
+  <% } else { %>
+    in the <%= place %>
+  <% } %>
+  in the <%= time %> on a <%= season %> day. It would be lovely if you saw
+  <% if (animal.charAt(0) == "a" || animal.charAt(0) == "e" ||
+         animal.charAt(0) == "i" || animal.charAt(0) == "o" ||
+         animal.charAt(0) == "u") { %>
+     an
+  <% } else { %>
+     a
+  <% } %>
+  <%= animal %> on the walk.
+</p>
+
+<p>That sounds awesome! I hope you can take a walk like that soon!</p>
+
+<%- include('bootfooter') -%>

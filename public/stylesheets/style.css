@@ -43,3 +43,10 @@ figcaption {
   caption-side: bottom;
   padding-top: 3px;
 }
+
+
+input[type=radio] {
+  float: left;
+  clear: none;
+  margin: 2px 0 0 2px;
+}

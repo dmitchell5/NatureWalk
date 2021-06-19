@@ -1,0 +1,69 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+<div class="mt-2">
+  <h1>What's Your Favorite Kind of Walk?</h1>
+</div>
+
+<form action="/fav-result" method="post">
+
+  <div class="form-group mt-4">
+      <label for="place">What is your favorite kind of place to walk?</label>
+      <input type="radio" name="place" value="beach" id="beach">
+      <label for="beach">Beach</label>
+
+      <input type="radio" name="place" value="forest" id="forest">
+      <label for="forest">Forest</label>
+
+      <input type="radio" name="place" value="river" id="river">
+      <label for="river">River</label>
+
+      <input type="radio" name="place" value="city" id="city">
+      <label for="city">City</label>
+
+      <input type="radio" name="place" value="park" id="park">
+      <label for="park">Park</label>
+
+      <input type="radio" name="place" value="desert" id="desert">
+      <label for="desert">Desert</label>
+
+      <input type="radio" name="place" value="mountains" id="mountains">
+      <label for="mountains">Mountains</label>
+  </div>
+
+  <div class="form-group mt-4">
+    <label for="animal">What's your favorite kind of animal to see on a walk?</label>
+    <input type="text" name="animal">
+  </div>
+
+  <div class="form-group mt-4">
+    <label for="time">What's your favorite time of day to walk?</label>
+    <select name="time"">
+      <option value="morning">Morning</option>
+      <option value="afternoon">Afternoon</option>
+      <option value="night">Night</option>
+    </select>
+  </div>
+
+  <div class="form-group mt-4">
+    <label for="season">What is your favorite season to walk?</label>
+    <input type="radio" name="season" value="spring" id="spring">
+    <label for="spring">Spring</label>
+
+    <input type="radio" name="season" value="summer" id="summer">
+    <label for="summer">Summer</label>
+
+    <input type="radio" name="season" value="fall" id="fall">
+    <label for="fall">Fall</label>
+
+    <input type="radio" name="season" value="winter" id="winter">
+    <label for="winter">Winter</label>
+  </div>
+
+  <div class= "form-group mt-2">
+    <input type="submit" value="Search">
+  </div>
+
+</form>
+
+<%- include('bootfooter') -%>
