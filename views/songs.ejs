@@ -1,0 +1,22 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+<div class="mt-2">
+  <h1>Bird Songs by Location</h1>
+</div>
+
+<form action="/song-results" method="post">
+
+  <div class= "form-group mt-4">
+    <label for="location">Search for bird songs in a certain location! Try a
+    state, country, or other area!</label>
+    <input type="text" size="50" name="location">
+  </div>
+
+  <div class= "form-group mt-2">
+    <input type="submit" value="Search">
+  </div>
+
+</form>
+
+<%- include('bootfooter') -%>

@@ -1,3 +1,5 @@
-# App Design Demo
-This is a simple demo which shows how to create an app using HTML and Bootstrap for styling and 
-NodeJS/Express for the server infrastructure with EJS as the template engine.
+# NatureWalk
+NatureWalk is my personal app final project for Brandeis's COSI 152 class, Web
+Application Development. The MVP would allow users to enter diary-like
+entries of nature walks that they take so that they can revisit them in the
+future!

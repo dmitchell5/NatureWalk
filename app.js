@@ -69,7 +69,23 @@ app.get("/about", (request, response) => {
   response.render("about");
 });
 
+app.get("/bird-songs", (request, response) => {
+  response.render("songs");
+});
 
+app.post("/song-results",
+  async (req,res,next) => {
+    try {
+      const loc = req.body.location
+      const url = "https://www.xeno-canto.org/api/2/recordings?query=loc:" + loc
+      const result = await axios.get(url)
+      res.locals.results = result.data.recordings
+      res.locals.location = loc
+      res.render('results')
+    } catch(error){
+      next(error)
+    }
+})
 
 
 

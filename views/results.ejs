@@ -1,0 +1,43 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+<div class="mt-2">
+  <h1>Bird Songs by Location</h1>
+</div>
+
+<form action="/song-results" method="post">
+
+  <div class= "form-group mt-4">
+    <label for="location">Search for bird songs in a certain location! Try a
+    state or other area!</label>
+    <input type="text" size="50" name="location">
+  </div>
+
+  <div class= "form-group mt-2">
+    <input type="submit" value="Search">
+  </div>
+
+</form>
+
+<div class="mt-4">
+  <h1>Results</h1>
+  <p>You searched for <%= location %></p>
+
+  <% results.map((rec) => { %>
+    <div class="mb-2">
+      <audio controls
+        <source src="<%= rec.file %>" type="audio/mpeg">
+        <p>Your browser does not support HTML5 audio, but you can still
+          <a href="<%= rec.file %>">download the music</a>.</p>
+      </audio>
+      <ul>
+        <li>Common name (English): <%= rec.en %></li>
+        <li>Scientific name: <i><%= rec.gen %> <%= rec.sp %></i></li>
+        <li>Location: <%= rec.loc %>, <%= rec.cnt %></li>
+      </ul>
+    </div>
+    <hr>
+  <%})%>
+</div>
+
+<%- include('bootfooter') -%>
